@@ -16,7 +16,7 @@ namespace WebShop
                 new Item(1, "Bread", 1.0)
             };
             ShoppingBasket basket = new ShoppingBasket(items);
-            //basket.GenerateLog();
+            basket.CalculateTotalSumPrice();
 
             // Scenario 2
             items = new List<Item>
@@ -25,7 +25,7 @@ namespace WebShop
                 new Item(2, "Bread", 1.0)
             };
             basket = new ShoppingBasket(items);
-            //basket.GenerateLog();
+            basket.CalculateTotalSumPrice();
 
             // Scenario 3
             items = new List<Item>
@@ -33,7 +33,7 @@ namespace WebShop
                 new Item(4, "Milk", 1.15)
             };
             basket = new ShoppingBasket(items);
-            //basket.GenerateLog();
+            basket.CalculateTotalSumPrice();
 
             // Scenario 4
             items = new List<Item>
@@ -43,7 +43,7 @@ namespace WebShop
                 new Item(1, "Bread", 1.0)
             };
             basket = new ShoppingBasket(items);
-            //basket.GenerateLog();
+            basket.CalculateTotalSumPrice();
         }
     }
 }
