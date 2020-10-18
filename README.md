@@ -1,5 +1,5 @@
 # WebShopLibrary
-C# TDD Implementation of simple WebShop (stand alone class library) using Nunit framework (3.12.0). </br>
+C# Test driven deveploment of simple WebShop (stand alone class library) using Nunit framework (3.12.0). </br>
 Library's ShoppingBasket component allows customers to add products and display total cost and discount.</br>
 Everytime a total sum of price of basket is requested it is logged with all information as a file in C:\\temp\ShoppingBasketLog.</br>
 
@@ -10,7 +10,7 @@ Solution contains:
   * ShoppingBasket.cs -> Main Library Class that contains all funcionalities
   * ShoppingBasketLog.cs -> Class that contains all funcionalities for generating WebShop logs 
 * WebShop.Library.Test folder 
-  * Unit tests made during development
+  * Unit tests made and run during development
 
 <b>Products example:</b> </br>
 | Products  | Price |
