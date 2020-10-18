@@ -28,7 +28,7 @@ namespace WebShop.Library
             {
                 Directory.CreateDirectory(@"C:\Temp\" + ClassName);
             }
-            // using (StreamWriter writer = File.CreateText(LogFilePath))
+
             using (StreamWriter writer = new StreamWriter(LogFilePath, true))
             {
                 writer.WriteLine(new string('-', lengthOfLogLine));
