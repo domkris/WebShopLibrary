@@ -133,6 +133,10 @@ namespace WebShop.Library
             }
             else 
             {
+                if (itemToChange.Price != item.Price) 
+                {
+                    throw new Exception("Wrong price listed in items to add");
+                }
                 itemToChange.Quantity += item.Quantity;
             }
         }
@@ -146,6 +150,10 @@ namespace WebShop.Library
                 throw new Exception("No item exist to remove");
             }
             Item itemToChange = Items.Find(i => i.Description == item.Description);
+            if (itemToChange.Price != item.Price) 
+            {
+                throw new Exception("Wrong price listed in items to remove");
+            }
             itemToChange.Quantity -= item.Quantity;
             if (itemToChange.Quantity == 0) 
             {

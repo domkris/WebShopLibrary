@@ -11,20 +11,21 @@ namespace WebShop
             // Scenario 1
             List<Item> items = new List<Item>
             {
-                new Item(1, "Butter", 0.80),
+                new Item(2, "Butter", 0.80),
                 new Item(1, "Milk", 1.15),
                 new Item(1, "Bread", 1.0)
             };
             ShoppingBasket basket = new ShoppingBasket(items);
+            basket.RemoveItem(new Item(1, "Butter", 0.80));
             basket.CalculateTotalSumPrice();
 
             // Scenario 2
             items = new List<Item>
             {
                 new Item(2, "Butter", 0.80),
-                new Item(2, "Bread", 1.0)
             };
             basket = new ShoppingBasket(items);
+            basket.AddItem(new Item(2, "Bread", 1.0));
             basket.CalculateTotalSumPrice();
 
             // Scenario 3

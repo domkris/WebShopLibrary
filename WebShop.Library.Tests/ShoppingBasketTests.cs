@@ -269,5 +269,31 @@ namespace WebShop.Library.Tests
             Assert.AreEqual(5.6, basket.TotalSumPrice);
 
         }
+
+        [Test]
+        public void When_Remove1ButterWithDifferentPrice_FromBasketWith1Butter_ExpectedException()
+        {
+            string errorMessage = "Wrong price listed in items to remove";
+            List<Item> items = new List<Item>()
+            {
+                new Item(1, "Butter", 0.80)
+            };
+            ShoppingBasket basket = new ShoppingBasket(items);
+            Assert.Throws(typeof(Exception), () => basket.RemoveItem(new Item(1, "Butter", 0.85)), errorMessage);
+
+        }
+
+        [Test]
+        public void When_Add1ButterWithDifferentPrice_ToBasketWith1Butter_ExpectedException()
+        {
+            string errorMessage = "Wrong price listed in items to add";
+            List<Item> items = new List<Item>()
+            {
+                new Item(1, "Butter", 0.80)
+            };
+            ShoppingBasket basket = new ShoppingBasket(items);
+            Assert.Throws(typeof(Exception), () => basket.AddItem(new Item(1, "Butter", 0.85)), errorMessage);
+
+        }
     }
 }
