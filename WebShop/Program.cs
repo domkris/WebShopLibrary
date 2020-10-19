@@ -16,6 +16,10 @@ namespace WebShop
                 new Item(1, "Bread", 1.0)
             };
             ShoppingBasket basket = new ShoppingBasket(items);
+
+            // NOTE : Why do I have to write the price everytime ?
+            // Maybe defining a struct/class or something else containing Inventory of the shop. 
+            // this is simplier and with wrong price exception is thrown.
             basket.RemoveItem(new Item(1, "Butter", 0.80));
             basket.CalculateTotalSumPrice();
 
